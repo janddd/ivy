@@ -18,7 +18,7 @@ except ValueError:
 # Absolute/relative path to video or camera input
 # E.g "./data/videos/sample_traffic_scene.mp4" or 1
 if os.getenv('VIDEO'):
-    VIDEO = int(os.getenv('VIDEO')) if IS_CAM else os.getenv('VIDEO')
+    VIDEO = os.getenv('VIDEO') if IS_CAM else os.getenv('VIDEO')
 else:
     print('Path to video or camera input not set.')
     ENVS_READY = False
